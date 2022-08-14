@@ -48,21 +48,7 @@ public class _03_PlaceAnOrder extends BaseDriver {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,600)");
 
-//        actions = new Actions(driver);
-//        actions.moveToElement(homePageElements.dress3).click().build();
-//        action.perform();
-//       //homePageElements.dress3.click();
 
-//        for (int i = 0; i < homePageElements.productList.size(); i++) {
-//            wait.until(ExpectedConditions.elementToBeClickable(homePageElements.productList.get(3))).click();
-//            break;
-//        }
-
-       // homePageElements.firstProduct.click();
-       // wait.until(ExpectedConditions.elementToBeClickable(homePageElements.addToCart)).click();
-
-//        actions.moveToElement(homePageElements.firstProduct).build();
-//        action.perform();
         homePageElements.firstProduct.click();
         homePageElements.addToCart.click();
 

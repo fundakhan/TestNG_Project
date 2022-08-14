@@ -1,0 +1,38 @@
+<suite name="Contact Us Function Test Suite">
+
+
+    <test name="Contact Us Test">
+        <parameter name = "browser" value="chrome"></parameter>
+        <parameter name = "contactUs" value="Hello, how are you?"></parameter>
+
+
+        <!-- value ya parameter yaziyoruz ciktida veriyor -->
+        <classes>
+            <class name="Test._02_ContactUs_Testing"></class>
+        </classes>
+    </test>
+
+    <test name="Contact Us Test 2">
+        <parameter name = "browser" value="chrome"></parameter>
+        <parameter name = "contactUs" value="my name is Toffee"></parameter>
+
+
+        <!-- value ya parameter yaziyoruz ciktida veriyor -->
+        <classes>
+            <class name="Test._02_ContactUs_Testing"></class>
+        </classes>
+    </test>
+
+    <test name="Contact Us Test 3">
+        <parameter name = "browser" value="chrome"></parameter>
+        <parameter name = "contactUs" value="I am always bark!!"></parameter>
+
+
+        <!-- value ya parameter yaziyoruz ciktida veriyor -->
+        <classes>
+            <class name="Test._02_ContactUs_Testing"></class>
+        </classes>
+    </test>
+
+
+</suite>

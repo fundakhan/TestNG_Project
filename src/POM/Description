@@ -1,0 +1,29 @@
+This project is testing the http://automationpractice.com/index.php
+• There are 2 functionalities you should be testing.
+• Test these 2 functionalities with TestNG, Selenium and Java.
+• You should have a Base Driver class where you set up your WebDriver.(You should
+provide driver type(chrome-firefox) as a @Parameter to your @BeforeMethod)
+• You should implement PAGE OBJECT MODEL into your project(create page classes)
+• Run your Tests from TestNG.xml
+• Contact Us Test and PlaceOrder Test should be in Regression group
+• Use explicit wait as much as you can!
+Try to not use Thread.sleep.(You will need a lot of waits for this website!
+BE CAREFUL :))
+• Pre-Condition: Create an account on the page before starting to automate and
+use that account for automation.
+
+
+SCENARIO 1 | Contact Us Functionality Test:
+
+- You should navigate to the website and login to your account.
+- You should test this functionality with 3 different input (use @Parameters to send test data)
+
+
+SCENARIO 2 - Place an Order:
+
+-You should navigate to the website and login to your account.
+- You should select a product from HomePage and add to cart
+- You should complete proceed to checkout process
+- At the end you should verify success message
+- Also you’ll see order reference value at the end, you should verify that value from “My Orders”
+page

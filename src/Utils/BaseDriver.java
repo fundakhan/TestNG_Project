@@ -58,6 +58,6 @@ public class BaseDriver {
     @AfterMethod
     public void tearDown(){
 
-        //driver.quit();
+        driver.quit();
     }
 }

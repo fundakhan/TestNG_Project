@@ -21,7 +21,7 @@ public class BaseDriver {
 
 
     @Parameters("browser")
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void setup(String browser){
 
         if (browser.equals("chrome")){
@@ -55,7 +55,7 @@ public class BaseDriver {
 
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void tearDown(){
 
         driver.quit();

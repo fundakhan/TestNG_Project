@@ -26,8 +26,9 @@ public class _03_PlaceAnOrder extends BaseDriver {
 
     String expectedOrderReference = "OOIBGADEG";
 
+    @Parameters({"username","password"})
     @Test
-    public void PlaceAnOrder(){
+    public void PlaceAnOrder(String username, String password){
 
         loginPageElements = new LoginPageElements(driver);
         homePageElements = new HomePageElements(driver);
@@ -37,8 +38,8 @@ public class _03_PlaceAnOrder extends BaseDriver {
 
         wait.until(ExpectedConditions.urlContains("my-account"));
 
-        wait.until(ExpectedConditions.visibilityOf(loginPageElements.emailInput)).sendKeys("toffee@gmail.com");
-        wait.until(ExpectedConditions.visibilityOf(loginPageElements.passwordInput)).sendKeys("tof1234");
+        wait.until(ExpectedConditions.visibilityOf(loginPageElements.emailInput)).sendKeys(username);
+        wait.until(ExpectedConditions.visibilityOf(loginPageElements.passwordInput)).sendKeys(password);
         wait.until(ExpectedConditions.elementToBeClickable(loginPageElements.submitBtn)).click();
 
         myAccountPageElements.homeBtn.click();

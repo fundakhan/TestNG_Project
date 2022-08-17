@@ -6,6 +6,7 @@ import POM.MyAccountPageElements;
 import Utils.BaseDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class _01_LoginTest extends BaseDriver {
@@ -17,9 +18,9 @@ public class _01_LoginTest extends BaseDriver {
 
     String expectedResult = "MY ACCOUNT";
 
-
+   @Parameters({"username", "password"})
     @Test
-    public void LoginTest(){
+    public void LoginTest(String username, String password){
 
      loginPageElements = new LoginPageElements(driver);
      homePageElements = new HomePageElements(driver);
@@ -27,8 +28,8 @@ public class _01_LoginTest extends BaseDriver {
 
      wait.until(ExpectedConditions.elementToBeClickable(homePageElements.signInBtn)).click();
 
-     wait.until(ExpectedConditions.visibilityOf(loginPageElements.emailInput)).sendKeys("toffee@gmail.com");
-     wait.until(ExpectedConditions.visibilityOf(loginPageElements.passwordInput)).sendKeys("tof1234");
+     wait.until(ExpectedConditions.visibilityOf(loginPageElements.emailInput)).sendKeys(username);
+     wait.until(ExpectedConditions.visibilityOf(loginPageElements.passwordInput)).sendKeys(password);
      wait.until(ExpectedConditions.elementToBeClickable(loginPageElements.submitBtn)).click();
 
         Assert.assertTrue(myAccountPageElements.myAccountText.isDisplayed());

@@ -19,18 +19,22 @@ public class _02_ContactUs_Testing extends BaseDriver {
 
     String expectedResult = "Your message has been successfully sent to our team.";
 
-    @Parameters("contactUs")
-    @Test
-    public void ContactUsTest(String input){
+    @Parameters({"message","username","password"})
+    @Test(groups = "Regression")
+    public void ContactUsTest(String input,String username, String password){
 
         loginPageElements = new LoginPageElements(driver);
         homePageElements = new HomePageElements(driver);
         myAccountPageElements = new MyAccountPageElements(driver);
 
+        wait.until(ExpectedConditions.urlContains("index.php"));
+
         wait.until(ExpectedConditions.elementToBeClickable(homePageElements.signInBtn)).click();
 
-        wait.until(ExpectedConditions.visibilityOf(loginPageElements.emailInput)).sendKeys("toffee@gmail.com");
-        wait.until(ExpectedConditions.visibilityOf(loginPageElements.passwordInput)).sendKeys("tof1234");
+        wait.until(ExpectedConditions.urlContains("my-account"));
+
+        wait.until(ExpectedConditions.visibilityOf(loginPageElements.emailInput)).sendKeys(username);
+        wait.until(ExpectedConditions.visibilityOf(loginPageElements.passwordInput)).sendKeys(password);
         wait.until(ExpectedConditions.elementToBeClickable(loginPageElements.submitBtn)).click();
 
         myAccountPageElements.contactUsBtn.click();

@@ -1,0 +1,23 @@
+<suite name="Login Function Test Suite">
+
+
+    <test name="Login Test">
+        <parameter name = "browser" value="chrome"></parameter>
+        <parameter name ="username" value="toffee@gmail.com"></parameter>
+        <parameter name ="password" value="tof1234"></parameter>
+        <classes>
+            <class name="Test._01_LoginTest"></class>
+        </classes>
+    </test>
+
+    <test name="Login Test 2">
+        <parameter name = "browser" value="firefox"></parameter>
+        <parameter name ="username" value="toffee@gmail.com"></parameter>
+        <parameter name ="password" value="tof1234"></parameter>
+        <classes>
+            <class name="Test._01_LoginTest"></class>
+        </classes>
+    </test>
+
+
+</suite>

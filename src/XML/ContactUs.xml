@@ -1,0 +1,69 @@
+<suite name="Contact Us Function Test Suite">
+    <groups>
+        <run>
+            <include name = "Regression"/>
+        </run>
+    </groups>
+
+    <test name="Message Test 1 on Chrome">
+        <parameter name = "browser" value="chrome"></parameter>
+        <parameter name ="username" value="toffee@gmail.com"></parameter>
+        <parameter name ="password" value="tof1234"></parameter>
+        <parameter name = "message" value="Hello, how are you?"></parameter>
+        <classes>
+            <class name="Test._02_ContactUs_Testing"></class>
+        </classes>
+    </test>
+
+    <test name="Message Test 2 on Chrome">
+        <parameter name = "browser" value="chrome"></parameter>
+        <parameter name ="username" value="toffee@gmail.com"></parameter>
+        <parameter name ="password" value="tof1234"></parameter>
+        <parameter name = "message" value="my name is Toffee"></parameter>
+        <classes>
+            <class name="Test._02_ContactUs_Testing"></class>
+        </classes>
+    </test>
+
+    <test name="Message Test 3 on Chrome">
+        <parameter name = "browser" value="chrome"></parameter>
+        <parameter name ="username" value="toffee@gmail.com"></parameter>
+        <parameter name ="password" value="tof1234"></parameter>
+        <parameter name = "message" value="I am always bark!!"></parameter>
+        <classes>
+            <class name="Test._02_ContactUs_Testing"></class>
+        </classes>
+    </test>
+
+    <test name="Message Test 1 on Firefox">
+        <parameter name = "browser" value="firefox"></parameter>
+        <parameter name ="username" value="toffee@gmail.com"></parameter>
+        <parameter name ="password" value="tof1234"></parameter>
+        <parameter name = "message" value="Hello, how are you?"></parameter>
+        <classes>
+            <class name="Test._02_ContactUs_Testing"></class>
+        </classes>
+    </test>
+
+    <test name="Message Test 2 on Firefox">
+        <parameter name = "browser" value="firefox"></parameter>
+        <parameter name ="username" value="toffee@gmail.com"></parameter>
+        <parameter name ="password" value="tof1234"></parameter>
+        <parameter name = "message" value="my name is Toffee"></parameter>
+        <classes>
+            <class name="Test._02_ContactUs_Testing"></class>
+        </classes>
+    </test>
+
+    <test name="Message Test 3 on Firefox">
+        <parameter name = "browser" value="firefox"></parameter>
+        <parameter name ="username" value="toffee@gmail.com"></parameter>
+        <parameter name ="password" value="tof1234"></parameter>
+        <parameter name = "message" value="I am always bark!!"></parameter>
+        <classes>
+            <class name="Test._02_ContactUs_Testing"></class>
+        </classes>
+    </test>
+
+
+</suite>
